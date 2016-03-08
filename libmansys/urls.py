@@ -16,6 +16,22 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from libsys import views, auth
+
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', views.index, name='index'),
+    url(r'^login/', auth.login, name='login'),
+    url(r'^logout/', auth.logout, name='logout'),
+    url(r'^register/', auth.register, name='register'),
+    url(r'^contact/', views.contact, name='contact'),
+
+
+    # url(r'^sessions/$', views.SessionList.as_view(), name='sessions_list'),
+    # url(r'^sessions/(?P<pk>[0-9]+)/$', views.SessionDetail.as_view(), name='sessions_detail'),
+
+    # url(r'^submit/', views.submit_session, name='submit_session'),
+
 ]
+
