@@ -11,6 +11,13 @@ def index(request):
 def contact(request):
 	return render(request, 'libsys/contact.html')
 
+def service(request):
+	return render(request, 'libsys/service.html')
+
+def about(request):
+	return render(request, 'libsys/about.html')
+
+
 
 # class SessionList(ListView):
 # 	model=Student
