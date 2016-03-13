@@ -30,10 +30,13 @@ urlpatterns = (
     url(r'^about/', views.about, name='about'),
 
 
-    # url(r'^sessions/$', views.SessionList.as_view(), name='sessions_list'),
-    # url(r'^sessions/(?P<pk>[0-9]+)/$', views.SessionDetail.as_view(), name='sessions_detail'),
+   # url(r'^student/$', views.StuList.as_view(), name='stu_list'),
+   # url(r'^student/(?P<pk>[0-9]+)/$', views.StuDetail.as_view(), name='stu_detail'),
+   #url(r'^student/create/$', views.StuCreate.as_view(), name='stu_create'),
+   #url(r'^student/update/(?P<pk>[0-9]+)/$', views.StuUpdate.as_view(), name='stu_update'),
+   #url(r'^student/delete/(?P<pk>[0-9]+)/$', views.StuDelete.as_view(), name='stu_delete'),
 
-    # url(r'^submit/', views.submit_session, name='submit_session'),
+    url(r'^submit/', views.submit_session, name='submit_session'),
 
 )
 

@@ -2,6 +2,10 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from libsys.models import Student
 from django.views.generic import *
+from django.core.urlresolvers import reverse_lazy
+
+
+
 
 #from django.http import HttpResponse
 
@@ -19,11 +23,26 @@ def about(request):
 
 
 
-# class SessionList(ListView):
-# 	model=Student
+#class StuList(ListView):
+	#model=Student
 
-# class  SessionDetail(DetailView):
-# 	model=Student
+#class  StuDetail(DetailView):
+	#model=Student
+
+#class  StuCreate(CreateView):
+	#model=Student
+	#fields=['name', 'regno', 'accno', 'address']
+
+#class  StuUpdate(UpdateView):
+	#model=Student
+	#fields=['name', 'regno', 'accno', 'address']
+
+#class  StuDelete(DeleteView):
+	#model=Student
+	#success_url= reverse_lazy('stu_list')
+
+
+
 
 @login_required
 def submit_session(request):

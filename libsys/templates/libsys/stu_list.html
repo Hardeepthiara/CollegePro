@@ -1,12 +1,35 @@
-{% extends 'layout.html' %}
+{% extends 'libsys/LLLL.html' %}
 
 {% block content %}
 	{% for Student in object_list %}
 	<div class="col-md-12">
-		<a href="{% url 'sessions_detail' Student.pk %}">
-			{{ Student.accno }}
+		<a href="{% url 'stu_detail' Student.pk %}">
+			{{ Student.name }}
 		</a>
 	</div>
+
+
+	<div class="col-md-8">
+		<a href="{% url 'stu_update' Student.pk %}">
+			Update
+		</a>
+	</div>
+
+
+	<div class="col-md-8">
+		<a href="{% url 'stu_delete' Student.pk %}">
+			Delete
+		</a>
+	</div>
+
+
+	<div class="col-md-12">
+		<a href="{% url 'stu_create' %}">
+			Submit Student list
+		</a>
+	</div>
+
+
 	{% endfor %}
 
 
