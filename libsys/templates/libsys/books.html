@@ -1,0 +1,43 @@
+{% extends 'libsys/LLLL.html' %}
+
+{% block content %}
+	{% for Book in object_list %}
+	<div class="col-md-12">
+		<a href="{% url 'book_detail' Book.pk %}">
+			
+			{{ Book.accno }}
+			{{ Book.title }}
+
+			
+
+		</a>
+	</div>
+
+
+	<div class="col-md-12">
+		<a href="{% url 'book_update' Book.pk %}">
+			Update
+		</a>
+	</div>
+
+
+	<div class="col-md-12">
+		<a href="{% url 'book_delete' Book.pk %}">
+			Delete
+		</a>
+	</div>
+
+
+	<div class="col-md-12">
+		<a href="{% url 'book_create' %}">
+			Submit Books list
+		</a>
+	</div>
+
+
+	{% endfor %}
+
+
+
+
+{% endblock %}

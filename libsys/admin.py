@@ -9,9 +9,9 @@ from libsys.models import *
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
 	pass
-	#list_display=('regno','author',)
-	search_fields=['accno']
-	#list_filter=('regno','accno','title')
+	list_display=('title', 'author',)
+	search_fields=['accno', 'title']
+	list_filter=('accno', 'title',)
 
 
 @admin.register(Student)

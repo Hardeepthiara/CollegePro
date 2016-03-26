@@ -4,7 +4,7 @@
 
 {#% load crispy_forms_tags %#}
 {% block content %}
-	<form method="post">
+	<form method="Post">
 	{% csrf_token %}
 	{{ form.as_p }}
 	{#{ crispy form }#}
@@ -12,7 +12,7 @@
 	</form>
 	
 	<div class="row">
-		<div class="col-md-3"><a href="{% url 'stu_list' %}">Return to list</a>
+		<div class="col-md-3"><a href="{% url 'return' %}">Return to list</a>
 		</div>
 		
 	</div>

@@ -3,36 +3,66 @@
 {% block content %}
 	{% for Student in object_list %}
 	<div class="col-md-12">
+		
 		<a href="{% url 'stu_detail' Student.pk %}">
+
+	<div class="container">
+		
+ <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><div class="col-md-28">{{ Student.name }}</div></td>
+        <td><div class="col-md-6">
+		<a href="{% url 'stu_update' Student.pk %}">
+			Update
+
+		</a></div>
+	   </td>
+       
+      </tr>
+    </tbody></table></div></div>
+      
+    
 			{{ Student.name }}
+			
+
 		</a>
 	</div>
 
 
-	<div class="col-md-8">
+	<div class="col-md-2">
 		<a href="{% url 'stu_update' Student.pk %}">
 			Update
 		</a>
 	</div>
 
 
-	<div class="col-md-8">
+	<div class="col-md-2">
 		<a href="{% url 'stu_delete' Student.pk %}">
 			Delete
 		</a>
 	</div>
 
 
-	<div class="col-md-12">
+	
+
+	{% endfor %}
+
+<div class="col-md-12">
 		<a href="{% url 'stu_create' %}">
 			Submit Student list
 		</a>
 	</div>
 
 
-	{% endfor %}
-
-
-
-
 {% endblock %}
+
+

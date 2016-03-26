@@ -398,6 +398,21 @@ body {
 .terminals span a:hover{
 	color: #e1184a;
 }
+
+.marquee p:nth-child(1) {
+    animation: left-one 20s ease infinite;
+    
+    color:#ff69b4;
+    
+    position: relative;
+     font-weight: bold;
+      font-style: italic;
+    
+ 
+    text-shadow-color: #222;
+ 
+  
+}
 /*footer*/
 .footer-bg{
 	background: #e8e8e8;

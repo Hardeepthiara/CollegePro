@@ -17,6 +17,10 @@ class Book(models.Model):
 	def __str__(self):
 		return self.title
 
+	def get_absolute_url(self):
+		return reverse('book_detail', kwargs={'pk':self.pk})
+
+
 
 class Student(models.Model):
 	name = models.CharField(max_length=50)
@@ -46,14 +50,23 @@ class Student(models.Model):
 
 
 
-	#def get_absolute_url(self):
-		#return reverse('stu_detail', kwargs={'pk':self.pk})
+	def get_absolute_url(self):
+		return reverse('stu_detail', kwargs={'pk':self.pk})
+
+
+
 
 
 class Issue(models.Model):
 	regno = models.ForeignKey(Student)
 	accno = models.ForeignKey(Book)
 	date_of_issue = models.DateField()
+
+	def get_absolute_url(self):
+		return reverse('issue_detail', kwargs={'pk':self.pk})
+
+
+	#on_delete=models.CASCADE)
 
 
 class Return(models.Model):
@@ -62,7 +75,18 @@ class Return(models.Model):
 	date_of_return = models.DateField()
 
 
+	def get_absolute_url(self):
+		return reverse('return_detail', kwargs={'pk':self.pk})
+
+
 class Fine(models.Model):
 	regno = models.ForeignKey(Student)
 	accno = models.ForeignKey(Book)
 	fine = models.FloatField()
+
+	def get_absolute_url(self):
+		return reverse('fine_detail', kwargs={'pk':self.pk})
+
+
+
+
