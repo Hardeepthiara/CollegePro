@@ -4,7 +4,7 @@ from libsys.models import Student, Book, Issue, Fine, Return
 from django.views.generic import *
 from django.core.urlresolvers import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
-#from libsys.forms import StudentForm
+
 
 #from crispy_forms.helper import FormHelper
 
@@ -38,7 +38,7 @@ class  StuDetail(DetailView):
 class  StuCreate(LoginRequiredMixin, CreateView):
 	model=Student
 	template_name = "libsys/stu_form.html"
-	#form_class=StudentForm
+	
 	fields=['name', 'regno',  'date_of_issue', 'address', 'course', 'accno', 'gender']
 
 class  StuUpdate(LoginRequiredMixin, UpdateView):

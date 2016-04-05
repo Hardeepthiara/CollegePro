@@ -35,16 +35,20 @@ LOGIN_URL = '/login/'
 # Application definition
 
 INSTALLED_APPS = [
+    # django core apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'crispy_forms',
+    # user-defined apps
     'libsys',
+    # third-party apps
+    'crispy_forms',
 ]
-#CRISPY_TEMPLATE_PACK='bootstrap'
+
+CRISPY_TEMPLATE_PACK='bootstrap3'
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',

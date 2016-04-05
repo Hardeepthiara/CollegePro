@@ -46,9 +46,10 @@
 
 
 	<div class="col-md-2">
-		<a href="{% url 'stu_delete' Student.pk %}">
-			Delete
-		</a>
+		<form action="{% url 'stu_delete' Student.pk %}" method="post" accept-charset="utf-8">
+			{% csrf_token %}
+    		<input type="submit" value="Delete" />
+		</form>
 	</div>
 
 

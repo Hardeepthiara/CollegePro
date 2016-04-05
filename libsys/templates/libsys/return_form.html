@@ -2,12 +2,12 @@
 
 {% extends 'libsys/LLLL.html' %}
 
-{#% load crispy_forms_tags %#}
+{% load crispy_forms_tags %}
 {% block content %}
 	<form method="Post">
 	{% csrf_token %}
-	{{ form.as_p }}
-	{#{ crispy form }#}
+	{#{ form.as_p }#}
+	{% crispy form %}
 	<button type="submit">Submit</button>
 	</form>
 	
